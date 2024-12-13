@@ -14,7 +14,7 @@ Consultora data se enfoca en establecer objetivos de negocios para obtener así 
 
 Nuestra consultora cuenta con un board, el cual está encargado de abordar los proyectos y negocios. 
 
-Para garantizar la excelencia en nuestros servicios, nuestro equipo está compuesto por especialistas con roles claramente definidos, que abordarán los objetivos propuestos anteriormente por la empresa:
+Para garantizar la excelencia en nuestros servicios, nuestro equipo está compuesto por especialistas con roles claramente definidos, que abordarán los objetivos propuestos por la empresa:
 - Analista de Datos: Julian Ariel Burastero, Francisco Fajardo
 Responsable de la limpieza, integración y preprocesamiento de datasets.
 - Especialista en Visualización de Datos: Julian Ariel Burastero,
