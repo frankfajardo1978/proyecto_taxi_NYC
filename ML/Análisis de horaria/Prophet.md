@@ -17,6 +17,7 @@ Es ideal para datos con estacionalidades claras y tendencias a largo plazo.
     - Estacionalidad (Seasonality): Patrones repetitivos diarios, semanales, mensuales o anuales (como mayor demanda en ciertas horas del día).
     - Festividades o eventos (Holidays): Cambios en la demanda debido a eventos externos (opcional).
 2. Modelo aditivo: La predicción se basa en la suma de estas componentes:
+
 ![alt text](image.png)
 
-3. Ajustes automáticos: Prophet ajusta automáticamente los hiperparámetros (como periodicidades) basándose en los datos, por lo que es fácil de usar sin configuración avanzada.
+4. Ajustes automáticos: Prophet ajusta automáticamente los hiperparámetros (como periodicidades) basándose en los datos, por lo que es fácil de usar sin configuración avanzada.
