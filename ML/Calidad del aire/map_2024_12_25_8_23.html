@@ -1,0 +1,3159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_604c0565d02eb6034a8e6a1b0a8cb662 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_604c0565d02eb6034a8e6a1b0a8cb662" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_604c0565d02eb6034a8e6a1b0a8cb662 = L.map(
+                "map_604c0565d02eb6034a8e6a1b0a8cb662",
+                {
+                    center: [40.7128, -74.006],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "maxBounds": null,
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5504aba2f43b48d89c1138e1d030d64f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5504aba2f43b48d89c1138e1d030d64f.addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            var circle_marker_7f371e43761a961de8c8940375e2e7f0 = L.circleMarker(
+                [40.71651, -73.997004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_7f371e43761a961de8c8940375e2e7f0.bindTooltip(
+                `<div>
+                     Zona: Manhattan Bridge<br>Valor: 13.6<br>Categoría: Bueno<br>Hora: 8:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6d6e588d87ff71e37542aa227b2e66d1 = L.circleMarker(
+                [40.755082, -73.990415],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_6d6e588d87ff71e37542aa227b2e66d1.bindTooltip(
+                `<div>
+                     Zona: Midtown-DOT<br>Valor: 14.48<br>Categoría: Bueno<br>Hora: 8:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_01f6017d30ffb889030a2c2cba4bcc18 = L.circleMarker(
+                [40.761234, -73.963886],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_01f6017d30ffb889030a2c2cba4bcc18.bindTooltip(
+                `<div>
+                     Zona: Queensboro Bridge<br>Valor: 10.02<br>Categoría: Bueno<br>Hora: 8:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_47f5bb5ce2312bea38feafe9ee51b8af = L.circleMarker(
+                [40.718073, -73.986059],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_47f5bb5ce2312bea38feafe9ee51b8af.bindTooltip(
+                `<div>
+                     Zona: Williamsburg Bridge<br>Valor: 11.48<br>Categoría: Bueno<br>Hora: 8:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1af77ddf791afcd465eb41b2690b9d0c = L.circleMarker(
+                [40.737107, -73.821556],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_1af77ddf791afcd465eb41b2690b9d0c.bindTooltip(
+                `<div>
+                     Zona: Queens College<br>Valor: 10.41<br>Categoría: Bueno<br>Hora: 8:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a108258b4f50a82e8c0b91b38db2397e = L.circleMarker(
+                [40.845167, -73.906143],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_a108258b4f50a82e8c0b91b38db2397e.bindTooltip(
+                `<div>
+                     Zona: Cross Bronx Expy<br>Valor: 12.56<br>Categoría: Bueno<br>Hora: 8:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b87eba36d58225f842908764fd55ff75 = L.circleMarker(
+                [40.806486, -73.922487],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_b87eba36d58225f842908764fd55ff75.bindTooltip(
+                `<div>
+                     Zona: Mott Haven<br>Valor: 10.76<br>Categoría: Bueno<br>Hora: 8:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c734bb3757bc2ca5ea78e0f08ac96b3b = L.circleMarker(
+                [40.722288, -73.974651],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_c734bb3757bc2ca5ea78e0f08ac96b3b.bindTooltip(
+                `<div>
+                     Zona: FDR<br>Valor: 10.54<br>Categoría: Bueno<br>Hora: 8:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0a016e303449765e420af261a69b481c = L.circleMarker(
+                [40.702798, -73.960824],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_0a016e303449765e420af261a69b481c.bindTooltip(
+                `<div>
+                     Zona: BQE<br>Valor: 10.63<br>Categoría: Bueno<br>Hora: 8:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ffcd9fafffbb2beaae8a66444bf7dbb4 = L.circleMarker(
+                [40.75069, -73.98783],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_ffcd9fafffbb2beaae8a66444bf7dbb4.bindTooltip(
+                `<div>
+                     Zona: Broadway/35th St<br>Valor: 10.86<br>Categoría: Bueno<br>Hora: 8:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_055f12869d2815aa3edb8030646bd8a3 = L.circleMarker(
+                [40.690155, -73.80908],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_055f12869d2815aa3edb8030646bd8a3.bindTooltip(
+                `<div>
+                     Zona: Van Wyck<br>Valor: 10.87<br>Categoría: Bueno<br>Hora: 8:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_976cbe60075d03364098e9acbb7a262c = L.circleMarker(
+                [40.609209, -74.151182],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_976cbe60075d03364098e9acbb7a262c.bindTooltip(
+                `<div>
+                     Zona: SI Expwy<br>Valor: 15.07<br>Categoría: Bueno<br>Hora: 8:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_adfb1cb4df23c6c878881162e28dc63d = L.circleMarker(
+                [40.761234, -73.963886],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_adfb1cb4df23c6c878881162e28dc63d.bindTooltip(
+                `<div>
+                     Zona: Queensboro Bridge<br>Valor: 9.93<br>Categoría: Bueno<br>Hora: 9:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1ff3b061cac94f68637ac579331dbb05 = L.circleMarker(
+                [40.845167, -73.906143],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_1ff3b061cac94f68637ac579331dbb05.bindTooltip(
+                `<div>
+                     Zona: Cross Bronx Expy<br>Valor: 12.75<br>Categoría: Bueno<br>Hora: 9:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a455d73e4e5b5f79b18275377bd77632 = L.circleMarker(
+                [40.755082, -73.990415],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_a455d73e4e5b5f79b18275377bd77632.bindTooltip(
+                `<div>
+                     Zona: Midtown-DOT<br>Valor: 13.27<br>Categoría: Bueno<br>Hora: 9:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c564d4c0f7a32dc1ba701b107538c653 = L.circleMarker(
+                [40.718073, -73.986059],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_c564d4c0f7a32dc1ba701b107538c653.bindTooltip(
+                `<div>
+                     Zona: Williamsburg Bridge<br>Valor: 10.95<br>Categoría: Bueno<br>Hora: 9:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fc3c8ff50b3b5d5cd1d98eadb94c05d5 = L.circleMarker(
+                [40.71651, -73.997004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_fc3c8ff50b3b5d5cd1d98eadb94c05d5.bindTooltip(
+                `<div>
+                     Zona: Manhattan Bridge<br>Valor: 12.62<br>Categoría: Bueno<br>Hora: 9:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_66733e1bc7dd6e1ddbb19f33d7ed559a = L.circleMarker(
+                [40.737107, -73.821556],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_66733e1bc7dd6e1ddbb19f33d7ed559a.bindTooltip(
+                `<div>
+                     Zona: Queens College<br>Valor: 9.26<br>Categoría: Bueno<br>Hora: 9:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e382d038cea85018c46519040b3e7d0f = L.circleMarker(
+                [40.722288, -73.974651],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_e382d038cea85018c46519040b3e7d0f.bindTooltip(
+                `<div>
+                     Zona: FDR<br>Valor: 9.29<br>Categoría: Bueno<br>Hora: 9:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_275f4799dea7ab98332adcf21c2e1776 = L.circleMarker(
+                [40.690155, -73.80908],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_275f4799dea7ab98332adcf21c2e1776.bindTooltip(
+                `<div>
+                     Zona: Van Wyck<br>Valor: 9.82<br>Categoría: Bueno<br>Hora: 9:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6897d26115ae2f5df91fc41304abf75c = L.circleMarker(
+                [40.609209, -74.151182],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_6897d26115ae2f5df91fc41304abf75c.bindTooltip(
+                `<div>
+                     Zona: SI Expwy<br>Valor: 14.27<br>Categoría: Bueno<br>Hora: 9:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_254691627eb723b8ced3defe04891952 = L.circleMarker(
+                [40.702798, -73.960824],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_254691627eb723b8ced3defe04891952.bindTooltip(
+                `<div>
+                     Zona: BQE<br>Valor: 9.91<br>Categoría: Bueno<br>Hora: 9:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_36d0e24d9d8df3dc7f443d0e2ceedf01 = L.circleMarker(
+                [40.806486, -73.922487],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_36d0e24d9d8df3dc7f443d0e2ceedf01.bindTooltip(
+                `<div>
+                     Zona: Mott Haven<br>Valor: 11.06<br>Categoría: Bueno<br>Hora: 9:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1310cf8810d6db2b305a93030d617ba7 = L.circleMarker(
+                [40.75069, -73.98783],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_1310cf8810d6db2b305a93030d617ba7.bindTooltip(
+                `<div>
+                     Zona: Broadway/35th St<br>Valor: 10.06<br>Categoría: Bueno<br>Hora: 9:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e744d7354f2eb918e8b7b65524d8cf04 = L.circleMarker(
+                [40.737107, -73.821556],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_e744d7354f2eb918e8b7b65524d8cf04.bindTooltip(
+                `<div>
+                     Zona: Queens College<br>Valor: 9.87<br>Categoría: Bueno<br>Hora: 10:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dc48cce2346dc9af02c20f18f430481e = L.circleMarker(
+                [40.755082, -73.990415],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_dc48cce2346dc9af02c20f18f430481e.bindTooltip(
+                `<div>
+                     Zona: Midtown-DOT<br>Valor: 13.32<br>Categoría: Bueno<br>Hora: 10:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5970fdf0cfe6ff1c88250a99a723e52b = L.circleMarker(
+                [40.845167, -73.906143],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_5970fdf0cfe6ff1c88250a99a723e52b.bindTooltip(
+                `<div>
+                     Zona: Cross Bronx Expy<br>Valor: 12.29<br>Categoría: Bueno<br>Hora: 10:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fa8003391ceb79c7f4f9ada1c6366ced = L.circleMarker(
+                [40.761234, -73.963886],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_fa8003391ceb79c7f4f9ada1c6366ced.bindTooltip(
+                `<div>
+                     Zona: Queensboro Bridge<br>Valor: 10.0<br>Categoría: Bueno<br>Hora: 10:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b5011f35ba88a020e82a412efd13f683 = L.circleMarker(
+                [40.718073, -73.986059],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_b5011f35ba88a020e82a412efd13f683.bindTooltip(
+                `<div>
+                     Zona: Williamsburg Bridge<br>Valor: 11.25<br>Categoría: Bueno<br>Hora: 10:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1e0a57c34301a27aba40e0b9cf786925 = L.circleMarker(
+                [40.71651, -73.997004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_1e0a57c34301a27aba40e0b9cf786925.bindTooltip(
+                `<div>
+                     Zona: Manhattan Bridge<br>Valor: 12.6<br>Categoría: Bueno<br>Hora: 10:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e94d8a5d7e3d4320eea5c41b4cb330a7 = L.circleMarker(
+                [40.75069, -73.98783],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_e94d8a5d7e3d4320eea5c41b4cb330a7.bindTooltip(
+                `<div>
+                     Zona: Broadway/35th St<br>Valor: 9.99<br>Categoría: Bueno<br>Hora: 10:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_08887fa463b967377d683a6a9ce57d6f = L.circleMarker(
+                [40.722288, -73.974651],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_08887fa463b967377d683a6a9ce57d6f.bindTooltip(
+                `<div>
+                     Zona: FDR<br>Valor: 9.21<br>Categoría: Bueno<br>Hora: 10:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b47a21c688bc8a7dd42244f54babd017 = L.circleMarker(
+                [40.690155, -73.80908],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_b47a21c688bc8a7dd42244f54babd017.bindTooltip(
+                `<div>
+                     Zona: Van Wyck<br>Valor: 9.32<br>Categoría: Bueno<br>Hora: 10:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8aa304917438df6397bace3ff2dd50a7 = L.circleMarker(
+                [40.609209, -74.151182],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_8aa304917438df6397bace3ff2dd50a7.bindTooltip(
+                `<div>
+                     Zona: SI Expwy<br>Valor: 13.65<br>Categoría: Bueno<br>Hora: 10:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f8ab14aa24599fd2b46fde5754a33a6a = L.circleMarker(
+                [40.702798, -73.960824],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_f8ab14aa24599fd2b46fde5754a33a6a.bindTooltip(
+                `<div>
+                     Zona: BQE<br>Valor: 11.36<br>Categoría: Bueno<br>Hora: 10:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c543a430ca676dcb6da654e1878139d4 = L.circleMarker(
+                [40.806486, -73.922487],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_c543a430ca676dcb6da654e1878139d4.bindTooltip(
+                `<div>
+                     Zona: Mott Haven<br>Valor: 10.72<br>Categoría: Bueno<br>Hora: 10:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_754573d00b905bc577299ed747d94869 = L.circleMarker(
+                [40.71651, -73.997004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_754573d00b905bc577299ed747d94869.bindTooltip(
+                `<div>
+                     Zona: Manhattan Bridge<br>Valor: 11.87<br>Categoría: Bueno<br>Hora: 11:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_59eb492cb056c279ea8b0804de44bbe4 = L.circleMarker(
+                [40.755082, -73.990415],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_59eb492cb056c279ea8b0804de44bbe4.bindTooltip(
+                `<div>
+                     Zona: Midtown-DOT<br>Valor: 12.66<br>Categoría: Bueno<br>Hora: 11:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7a483b985263ba0d51e594c12613613e = L.circleMarker(
+                [40.761234, -73.963886],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_7a483b985263ba0d51e594c12613613e.bindTooltip(
+                `<div>
+                     Zona: Queensboro Bridge<br>Valor: 9.67<br>Categoría: Bueno<br>Hora: 11:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d0b117e8c83d833ad919b9d6fcce7ccb = L.circleMarker(
+                [40.718073, -73.986059],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_d0b117e8c83d833ad919b9d6fcce7ccb.bindTooltip(
+                `<div>
+                     Zona: Williamsburg Bridge<br>Valor: 11.0<br>Categoría: Bueno<br>Hora: 11:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a856cf5397458a2a1bb2a323e5867dcd = L.circleMarker(
+                [40.702798, -73.960824],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_a856cf5397458a2a1bb2a323e5867dcd.bindTooltip(
+                `<div>
+                     Zona: BQE<br>Valor: 9.29<br>Categoría: Bueno<br>Hora: 11:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bb490d985cb4ef987f43f4039457d059 = L.circleMarker(
+                [40.737107, -73.821556],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_bb490d985cb4ef987f43f4039457d059.bindTooltip(
+                `<div>
+                     Zona: Queens College<br>Valor: 10.33<br>Categoría: Bueno<br>Hora: 11:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3ee162646274c020411432abb89d8a33 = L.circleMarker(
+                [40.845167, -73.906143],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_3ee162646274c020411432abb89d8a33.bindTooltip(
+                `<div>
+                     Zona: Cross Bronx Expy<br>Valor: 11.62<br>Categoría: Bueno<br>Hora: 11:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_198b3b12f3fa7c3bbc735ae9cb128fe3 = L.circleMarker(
+                [40.806486, -73.922487],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_198b3b12f3fa7c3bbc735ae9cb128fe3.bindTooltip(
+                `<div>
+                     Zona: Mott Haven<br>Valor: 10.03<br>Categoría: Bueno<br>Hora: 11:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_57952c4ce5dd7f7deeb76a291e268d7c = L.circleMarker(
+                [40.722288, -73.974651],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_57952c4ce5dd7f7deeb76a291e268d7c.bindTooltip(
+                `<div>
+                     Zona: FDR<br>Valor: 9.5<br>Categoría: Bueno<br>Hora: 11:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_18673dc6c0ada1e002b5c44a6784ca7a = L.circleMarker(
+                [40.690155, -73.80908],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_18673dc6c0ada1e002b5c44a6784ca7a.bindTooltip(
+                `<div>
+                     Zona: Van Wyck<br>Valor: 9.85<br>Categoría: Bueno<br>Hora: 11:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f7727191b528af37f2d013f6ca5bdddc = L.circleMarker(
+                [40.609209, -74.151182],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_f7727191b528af37f2d013f6ca5bdddc.bindTooltip(
+                `<div>
+                     Zona: SI Expwy<br>Valor: 12.31<br>Categoría: Bueno<br>Hora: 11:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e694d85217a25592bbc2e6ae993c0d6a = L.circleMarker(
+                [40.75069, -73.98783],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_e694d85217a25592bbc2e6ae993c0d6a.bindTooltip(
+                `<div>
+                     Zona: Broadway/35th St<br>Valor: 9.68<br>Categoría: Bueno<br>Hora: 11:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9e31f412d2490936c14ec6a0ddf0d84b = L.circleMarker(
+                [40.755082, -73.990415],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_9e31f412d2490936c14ec6a0ddf0d84b.bindTooltip(
+                `<div>
+                     Zona: Midtown-DOT<br>Valor: 12.77<br>Categoría: Bueno<br>Hora: 12:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8cfc49c5d92b06b4819cbfd6a6e57d25 = L.circleMarker(
+                [40.761234, -73.963886],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_8cfc49c5d92b06b4819cbfd6a6e57d25.bindTooltip(
+                `<div>
+                     Zona: Queensboro Bridge<br>Valor: 9.54<br>Categoría: Bueno<br>Hora: 12:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_81f15686f658f35b89d4629065aea7fa = L.circleMarker(
+                [40.718073, -73.986059],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_81f15686f658f35b89d4629065aea7fa.bindTooltip(
+                `<div>
+                     Zona: Williamsburg Bridge<br>Valor: 10.33<br>Categoría: Bueno<br>Hora: 12:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_90595d5485665a62dfddf4e18e29461b = L.circleMarker(
+                [40.737107, -73.821556],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_90595d5485665a62dfddf4e18e29461b.bindTooltip(
+                `<div>
+                     Zona: Queens College<br>Valor: 10.23<br>Categoría: Bueno<br>Hora: 12:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7b2ae01e416ba1e458a915bf36448985 = L.circleMarker(
+                [40.71651, -73.997004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_7b2ae01e416ba1e458a915bf36448985.bindTooltip(
+                `<div>
+                     Zona: Manhattan Bridge<br>Valor: 11.21<br>Categoría: Bueno<br>Hora: 12:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a2130b3a923f76f7ffd5838b47927d68 = L.circleMarker(
+                [40.845167, -73.906143],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_a2130b3a923f76f7ffd5838b47927d68.bindTooltip(
+                `<div>
+                     Zona: Cross Bronx Expy<br>Valor: 12.63<br>Categoría: Bueno<br>Hora: 12:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2c17570f0b9361c96ef3ad0eeda96209 = L.circleMarker(
+                [40.806486, -73.922487],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_2c17570f0b9361c96ef3ad0eeda96209.bindTooltip(
+                `<div>
+                     Zona: Mott Haven<br>Valor: 10.33<br>Categoría: Bueno<br>Hora: 12:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b8823deba20a6a713457f11f2b03f8ca = L.circleMarker(
+                [40.722288, -73.974651],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_b8823deba20a6a713457f11f2b03f8ca.bindTooltip(
+                `<div>
+                     Zona: FDR<br>Valor: 9.97<br>Categoría: Bueno<br>Hora: 12:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ef61815ad66e868b74719e85c4ae2477 = L.circleMarker(
+                [40.690155, -73.80908],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_ef61815ad66e868b74719e85c4ae2477.bindTooltip(
+                `<div>
+                     Zona: Van Wyck<br>Valor: 9.73<br>Categoría: Bueno<br>Hora: 12:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b2a9cb14be9c1ed4d2bea0950622e0e5 = L.circleMarker(
+                [40.609209, -74.151182],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_b2a9cb14be9c1ed4d2bea0950622e0e5.bindTooltip(
+                `<div>
+                     Zona: SI Expwy<br>Valor: 12.21<br>Categoría: Bueno<br>Hora: 12:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8e3b6b7f5488f404341371b6d298a414 = L.circleMarker(
+                [40.702798, -73.960824],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_8e3b6b7f5488f404341371b6d298a414.bindTooltip(
+                `<div>
+                     Zona: BQE<br>Valor: 8.8<br>Categoría: Bueno<br>Hora: 12:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c023b3468599eb7c096c1b4ab6cd4cac = L.circleMarker(
+                [40.75069, -73.98783],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_c023b3468599eb7c096c1b4ab6cd4cac.bindTooltip(
+                `<div>
+                     Zona: Broadway/35th St<br>Valor: 10.47<br>Categoría: Bueno<br>Hora: 12:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4f0d659b4cf03f400208a63690692ed4 = L.circleMarker(
+                [40.755082, -73.990415],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_4f0d659b4cf03f400208a63690692ed4.bindTooltip(
+                `<div>
+                     Zona: Midtown-DOT<br>Valor: 12.32<br>Categoría: Bueno<br>Hora: 13:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ca5cbf5b9e7b20cb504f45d56b5737c4 = L.circleMarker(
+                [40.761234, -73.963886],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_ca5cbf5b9e7b20cb504f45d56b5737c4.bindTooltip(
+                `<div>
+                     Zona: Queensboro Bridge<br>Valor: 9.79<br>Categoría: Bueno<br>Hora: 13:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_67ef7a898893fc1757c18422951c8893 = L.circleMarker(
+                [40.718073, -73.986059],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_67ef7a898893fc1757c18422951c8893.bindTooltip(
+                `<div>
+                     Zona: Williamsburg Bridge<br>Valor: 9.38<br>Categoría: Bueno<br>Hora: 13:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ae2ad13e4af06195824762808a23988e = L.circleMarker(
+                [40.737107, -73.821556],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_ae2ad13e4af06195824762808a23988e.bindTooltip(
+                `<div>
+                     Zona: Queens College<br>Valor: 10.23<br>Categoría: Bueno<br>Hora: 13:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_564eb07ab3ed40bc0d986589d6a51d72 = L.circleMarker(
+                [40.845167, -73.906143],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_564eb07ab3ed40bc0d986589d6a51d72.bindTooltip(
+                `<div>
+                     Zona: Cross Bronx Expy<br>Valor: 13.32<br>Categoría: Bueno<br>Hora: 13:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d389483b9a933cf53589366386611e52 = L.circleMarker(
+                [40.71651, -73.997004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_d389483b9a933cf53589366386611e52.bindTooltip(
+                `<div>
+                     Zona: Manhattan Bridge<br>Valor: 9.92<br>Categoría: Bueno<br>Hora: 13:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_50b4a89a4b53a5fe5e2fbfcc9579298e = L.circleMarker(
+                [40.75069, -73.98783],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_50b4a89a4b53a5fe5e2fbfcc9579298e.bindTooltip(
+                `<div>
+                     Zona: Broadway/35th St<br>Valor: 9.4<br>Categoría: Bueno<br>Hora: 13:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_487044bb7558e52026e2515019f5bfa5 = L.circleMarker(
+                [40.690155, -73.80908],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_487044bb7558e52026e2515019f5bfa5.bindTooltip(
+                `<div>
+                     Zona: Van Wyck<br>Valor: 9.91<br>Categoría: Bueno<br>Hora: 13:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ae63187ae2cb5e3f10080717cdb347c9 = L.circleMarker(
+                [40.609209, -74.151182],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_ae63187ae2cb5e3f10080717cdb347c9.bindTooltip(
+                `<div>
+                     Zona: SI Expwy<br>Valor: 13.76<br>Categoría: Bueno<br>Hora: 13:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e22cc225bdefceb46365e45217652c79 = L.circleMarker(
+                [40.702798, -73.960824],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_e22cc225bdefceb46365e45217652c79.bindTooltip(
+                `<div>
+                     Zona: BQE<br>Valor: 9.43<br>Categoría: Bueno<br>Hora: 13:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d8a675a436175b19d4d35ee8cd7c5dba = L.circleMarker(
+                [40.722288, -73.974651],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_d8a675a436175b19d4d35ee8cd7c5dba.bindTooltip(
+                `<div>
+                     Zona: FDR<br>Valor: 9.57<br>Categoría: Bueno<br>Hora: 13:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4244921927cd02e75ef0d75b29f136dc = L.circleMarker(
+                [40.806486, -73.922487],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_4244921927cd02e75ef0d75b29f136dc.bindTooltip(
+                `<div>
+                     Zona: Mott Haven<br>Valor: 10.65<br>Categoría: Bueno<br>Hora: 13:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_92bdb75c473c05cbd29657aaec3acaa9 = L.circleMarker(
+                [40.755082, -73.990415],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_92bdb75c473c05cbd29657aaec3acaa9.bindTooltip(
+                `<div>
+                     Zona: Midtown-DOT<br>Valor: 11.79<br>Categoría: Bueno<br>Hora: 14:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a63a735dedb82779c901176599af1197 = L.circleMarker(
+                [40.761234, -73.963886],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_a63a735dedb82779c901176599af1197.bindTooltip(
+                `<div>
+                     Zona: Queensboro Bridge<br>Valor: 10.65<br>Categoría: Bueno<br>Hora: 14:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4b06cce7b5c57a331c799cde818f602d = L.circleMarker(
+                [40.718073, -73.986059],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_4b06cce7b5c57a331c799cde818f602d.bindTooltip(
+                `<div>
+                     Zona: Williamsburg Bridge<br>Valor: 9.77<br>Categoría: Bueno<br>Hora: 14:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b4689ce724fccbda07b439f06803b835 = L.circleMarker(
+                [40.737107, -73.821556],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_b4689ce724fccbda07b439f06803b835.bindTooltip(
+                `<div>
+                     Zona: Queens College<br>Valor: 10.48<br>Categoría: Bueno<br>Hora: 14:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_38da33df175219458eb2fc2bb4a1a8aa = L.circleMarker(
+                [40.845167, -73.906143],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_38da33df175219458eb2fc2bb4a1a8aa.bindTooltip(
+                `<div>
+                     Zona: Cross Bronx Expy<br>Valor: 14.39<br>Categoría: Bueno<br>Hora: 14:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9585d9dba26261c4879d94a31549bc9b = L.circleMarker(
+                [40.71651, -73.997004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_9585d9dba26261c4879d94a31549bc9b.bindTooltip(
+                `<div>
+                     Zona: Manhattan Bridge<br>Valor: 8.85<br>Categoría: Bueno<br>Hora: 14:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_689ab749d79eb740ca09e8cf3fa56fd1 = L.circleMarker(
+                [40.75069, -73.98783],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_689ab749d79eb740ca09e8cf3fa56fd1.bindTooltip(
+                `<div>
+                     Zona: Broadway/35th St<br>Valor: 8.48<br>Categoría: Bueno<br>Hora: 14:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_10d28c8e736f2cb758cc76e0a70e00be = L.circleMarker(
+                [40.690155, -73.80908],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_10d28c8e736f2cb758cc76e0a70e00be.bindTooltip(
+                `<div>
+                     Zona: Van Wyck<br>Valor: 10.54<br>Categoría: Bueno<br>Hora: 14:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_005ca99f7aa7154e2e5cd5ef55fa34a7 = L.circleMarker(
+                [40.806486, -73.922487],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_005ca99f7aa7154e2e5cd5ef55fa34a7.bindTooltip(
+                `<div>
+                     Zona: Mott Haven<br>Valor: 11.58<br>Categoría: Bueno<br>Hora: 14:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d571000e50a9de28ad6436196e9728ac = L.circleMarker(
+                [40.722288, -73.974651],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_d571000e50a9de28ad6436196e9728ac.bindTooltip(
+                `<div>
+                     Zona: FDR<br>Valor: 9.47<br>Categoría: Bueno<br>Hora: 14:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5c7061ccb50af0a9c2f23bef4fd26feb = L.circleMarker(
+                [40.609209, -74.151182],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_5c7061ccb50af0a9c2f23bef4fd26feb.bindTooltip(
+                `<div>
+                     Zona: SI Expwy<br>Valor: 13.92<br>Categoría: Bueno<br>Hora: 14:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_342b80ae02ea8bfead0d8b25afbf8e41 = L.circleMarker(
+                [40.702798, -73.960824],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_342b80ae02ea8bfead0d8b25afbf8e41.bindTooltip(
+                `<div>
+                     Zona: BQE<br>Valor: 9.6<br>Categoría: Bueno<br>Hora: 14:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c246e01a1afbc15e0e37726de7e1553c = L.circleMarker(
+                [40.71651, -73.997004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_c246e01a1afbc15e0e37726de7e1553c.bindTooltip(
+                `<div>
+                     Zona: Manhattan Bridge<br>Valor: 10.09<br>Categoría: Bueno<br>Hora: 15:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_da98717ab4aae5088398bcf3f784d75c = L.circleMarker(
+                [40.755082, -73.990415],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_da98717ab4aae5088398bcf3f784d75c.bindTooltip(
+                `<div>
+                     Zona: Midtown-DOT<br>Valor: 13.95<br>Categoría: Bueno<br>Hora: 15:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d1298a263534c4e03fa89fe23a56cf08 = L.circleMarker(
+                [40.761234, -73.963886],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_d1298a263534c4e03fa89fe23a56cf08.bindTooltip(
+                `<div>
+                     Zona: Queensboro Bridge<br>Valor: 10.28<br>Categoría: Bueno<br>Hora: 15:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_75caf826fc737ccc3ea9dc38b62c05b0 = L.circleMarker(
+                [40.718073, -73.986059],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_75caf826fc737ccc3ea9dc38b62c05b0.bindTooltip(
+                `<div>
+                     Zona: Williamsburg Bridge<br>Valor: 10.68<br>Categoría: Bueno<br>Hora: 15:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7dbb5e715a04cdb459bebc877a08b4e = L.circleMarker(
+                [40.845167, -73.906143],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_d7dbb5e715a04cdb459bebc877a08b4e.bindTooltip(
+                `<div>
+                     Zona: Cross Bronx Expy<br>Valor: 15.59<br>Categoría: Bueno<br>Hora: 15:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ba534f6152e0dd8b43067fa2b8f04b23 = L.circleMarker(
+                [40.737107, -73.821556],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_ba534f6152e0dd8b43067fa2b8f04b23.bindTooltip(
+                `<div>
+                     Zona: Queens College<br>Valor: 9.86<br>Categoría: Bueno<br>Hora: 15:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6e078fdfece60d022720d674152e72d6 = L.circleMarker(
+                [40.75069, -73.98783],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_6e078fdfece60d022720d674152e72d6.bindTooltip(
+                `<div>
+                     Zona: Broadway/35th St<br>Valor: 9.07<br>Categoría: Bueno<br>Hora: 15:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_68ab8b327cd22d9121406093ca7bdf7d = L.circleMarker(
+                [40.806486, -73.922487],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_68ab8b327cd22d9121406093ca7bdf7d.bindTooltip(
+                `<div>
+                     Zona: Mott Haven<br>Valor: 12.9<br>Categoría: Bueno<br>Hora: 15:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7aa02243c00c5c074f07a4cec3d6ed6e = L.circleMarker(
+                [40.722288, -73.974651],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_7aa02243c00c5c074f07a4cec3d6ed6e.bindTooltip(
+                `<div>
+                     Zona: FDR<br>Valor: 10.3<br>Categoría: Bueno<br>Hora: 15:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c703cf88b57d1977ee8b51c9fdd71c81 = L.circleMarker(
+                [40.690155, -73.80908],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_c703cf88b57d1977ee8b51c9fdd71c81.bindTooltip(
+                `<div>
+                     Zona: Van Wyck<br>Valor: 9.94<br>Categoría: Bueno<br>Hora: 15:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8bb192dc7aed7f2e68fea413c16d2654 = L.circleMarker(
+                [40.609209, -74.151182],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_8bb192dc7aed7f2e68fea413c16d2654.bindTooltip(
+                `<div>
+                     Zona: SI Expwy<br>Valor: 12.28<br>Categoría: Bueno<br>Hora: 15:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1eea14ad502830c877e1a7520026ca0e = L.circleMarker(
+                [40.702798, -73.960824],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_1eea14ad502830c877e1a7520026ca0e.bindTooltip(
+                `<div>
+                     Zona: BQE<br>Valor: 11.35<br>Categoría: Bueno<br>Hora: 15:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0d2f0ce6cebfe2f5847d2780e7c30f55 = L.circleMarker(
+                [40.737107, -73.821556],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_0d2f0ce6cebfe2f5847d2780e7c30f55.bindTooltip(
+                `<div>
+                     Zona: Queens College<br>Valor: 11.23<br>Categoría: Bueno<br>Hora: 16:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3890140685d4b5f3156b49b34f04fd98 = L.circleMarker(
+                [40.755082, -73.990415],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_3890140685d4b5f3156b49b34f04fd98.bindTooltip(
+                `<div>
+                     Zona: Midtown-DOT<br>Valor: 15.2<br>Categoría: Bueno<br>Hora: 16:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_15b50bd7b41d474ff42b406a166434e0 = L.circleMarker(
+                [40.71651, -73.997004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_15b50bd7b41d474ff42b406a166434e0.bindTooltip(
+                `<div>
+                     Zona: Manhattan Bridge<br>Valor: 12.61<br>Categoría: Bueno<br>Hora: 16:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9ed0bb0e9352a4bffdae077466834cbe = L.circleMarker(
+                [40.761234, -73.963886],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_9ed0bb0e9352a4bffdae077466834cbe.bindTooltip(
+                `<div>
+                     Zona: Queensboro Bridge<br>Valor: 10.13<br>Categoría: Bueno<br>Hora: 16:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aed99d32cde446d1fc762f8db7e52ebd = L.circleMarker(
+                [40.718073, -73.986059],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_aed99d32cde446d1fc762f8db7e52ebd.bindTooltip(
+                `<div>
+                     Zona: Williamsburg Bridge<br>Valor: 10.69<br>Categoría: Bueno<br>Hora: 16:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_531f9c2402bbed0143feefb6e6b82b4b = L.circleMarker(
+                [40.845167, -73.906143],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_531f9c2402bbed0143feefb6e6b82b4b.bindTooltip(
+                `<div>
+                     Zona: Cross Bronx Expy<br>Valor: 12.92<br>Categoría: Bueno<br>Hora: 16:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b86924582d84ff78ae79328331031a2a = L.circleMarker(
+                [40.690155, -73.80908],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_b86924582d84ff78ae79328331031a2a.bindTooltip(
+                `<div>
+                     Zona: Van Wyck<br>Valor: 10.75<br>Categoría: Bueno<br>Hora: 16:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_08c761ca0589384611b1637f5d491c59 = L.circleMarker(
+                [40.75069, -73.98783],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_08c761ca0589384611b1637f5d491c59.bindTooltip(
+                `<div>
+                     Zona: Broadway/35th St<br>Valor: 10.05<br>Categoría: Bueno<br>Hora: 16:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1e0ced8d6b5e745167d44a4ab7020e65 = L.circleMarker(
+                [40.806486, -73.922487],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_1e0ced8d6b5e745167d44a4ab7020e65.bindTooltip(
+                `<div>
+                     Zona: Mott Haven<br>Valor: 10.85<br>Categoría: Bueno<br>Hora: 16:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c0ce71aeeba302baa0782e165c391ddc = L.circleMarker(
+                [40.722288, -73.974651],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_c0ce71aeeba302baa0782e165c391ddc.bindTooltip(
+                `<div>
+                     Zona: FDR<br>Valor: 2.53<br>Categoría: Bueno<br>Hora: 16:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_52d48fab1844c6a279ef848d0e1ebcc6 = L.circleMarker(
+                [40.702798, -73.960824],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_52d48fab1844c6a279ef848d0e1ebcc6.bindTooltip(
+                `<div>
+                     Zona: BQE<br>Valor: 10.72<br>Categoría: Bueno<br>Hora: 16:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d222735e686ddc7a72f474b2f47364eb = L.circleMarker(
+                [40.609209, -74.151182],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_d222735e686ddc7a72f474b2f47364eb.bindTooltip(
+                `<div>
+                     Zona: SI Expwy<br>Valor: 13.12<br>Categoría: Bueno<br>Hora: 16:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8e3c4bd3d1d567f6118f293d1246bedb = L.circleMarker(
+                [40.71651, -73.997004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_8e3c4bd3d1d567f6118f293d1246bedb.bindTooltip(
+                `<div>
+                     Zona: Manhattan Bridge<br>Valor: 14.38<br>Categoría: Bueno<br>Hora: 17:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_210feb021a6139ec39c4f032f111a10e = L.circleMarker(
+                [40.845167, -73.906143],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_210feb021a6139ec39c4f032f111a10e.bindTooltip(
+                `<div>
+                     Zona: Cross Bronx Expy<br>Valor: 10.67<br>Categoría: Bueno<br>Hora: 17:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_db978b71e172377db32c624dc398ba55 = L.circleMarker(
+                [40.755082, -73.990415],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_db978b71e172377db32c624dc398ba55.bindTooltip(
+                `<div>
+                     Zona: Midtown-DOT<br>Valor: 15.53<br>Categoría: Bueno<br>Hora: 17:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_55e5bff87ca588f7baec652d153dbc07 = L.circleMarker(
+                [40.761234, -73.963886],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_55e5bff87ca588f7baec652d153dbc07.bindTooltip(
+                `<div>
+                     Zona: Queensboro Bridge<br>Valor: 10.22<br>Categoría: Bueno<br>Hora: 17:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_93af4a533487813a6b237cd4d050d8d6 = L.circleMarker(
+                [40.718073, -73.986059],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_93af4a533487813a6b237cd4d050d8d6.bindTooltip(
+                `<div>
+                     Zona: Williamsburg Bridge<br>Valor: 11.7<br>Categoría: Bueno<br>Hora: 17:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_20418852ca937dcbecce00a956566bf6 = L.circleMarker(
+                [40.737107, -73.821556],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_20418852ca937dcbecce00a956566bf6.bindTooltip(
+                `<div>
+                     Zona: Queens College<br>Valor: 8.05<br>Categoría: Bueno<br>Hora: 17:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_771a9f022370353d226279dacac1cec2 = L.circleMarker(
+                [40.75069, -73.98783],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_771a9f022370353d226279dacac1cec2.bindTooltip(
+                `<div>
+                     Zona: Broadway/35th St<br>Valor: 10.88<br>Categoría: Bueno<br>Hora: 17:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1eec3132cf85be451145e3d5f6468ea3 = L.circleMarker(
+                [40.722288, -73.974651],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_1eec3132cf85be451145e3d5f6468ea3.bindTooltip(
+                `<div>
+                     Zona: FDR<br>Valor: 2.21<br>Categoría: Bueno<br>Hora: 17:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_151c78460ef1f5ffa8317dcca41c7ece = L.circleMarker(
+                [40.690155, -73.80908],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_151c78460ef1f5ffa8317dcca41c7ece.bindTooltip(
+                `<div>
+                     Zona: Van Wyck<br>Valor: 9.91<br>Categoría: Bueno<br>Hora: 17:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9f132b711a80d1a74f99f532257ff7d5 = L.circleMarker(
+                [40.609209, -74.151182],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_9f132b711a80d1a74f99f532257ff7d5.bindTooltip(
+                `<div>
+                     Zona: SI Expwy<br>Valor: 13.7<br>Categoría: Bueno<br>Hora: 17:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_398c2c786964c5e090c301e448138bb4 = L.circleMarker(
+                [40.702798, -73.960824],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_398c2c786964c5e090c301e448138bb4.bindTooltip(
+                `<div>
+                     Zona: BQE<br>Valor: 7.72<br>Categoría: Bueno<br>Hora: 17:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c8a760421161858ae09b7776db087ca0 = L.circleMarker(
+                [40.806486, -73.922487],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_c8a760421161858ae09b7776db087ca0.bindTooltip(
+                `<div>
+                     Zona: Mott Haven<br>Valor: 9.72<br>Categoría: Bueno<br>Hora: 17:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a207206a77dcae7574e79062be848c14 = L.circleMarker(
+                [40.737107, -73.821556],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_a207206a77dcae7574e79062be848c14.bindTooltip(
+                `<div>
+                     Zona: Queens College<br>Valor: 7.69<br>Categoría: Bueno<br>Hora: 18:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e2e91345cb6a124208c45219c1cfac1d = L.circleMarker(
+                [40.71651, -73.997004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_e2e91345cb6a124208c45219c1cfac1d.bindTooltip(
+                `<div>
+                     Zona: Manhattan Bridge<br>Valor: 11.65<br>Categoría: Bueno<br>Hora: 18:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a93de339514c8d3e5974086c160a9029 = L.circleMarker(
+                [40.761234, -73.963886],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_a93de339514c8d3e5974086c160a9029.bindTooltip(
+                `<div>
+                     Zona: Queensboro Bridge<br>Valor: 8.9<br>Categoría: Bueno<br>Hora: 18:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_22618d441f5271cb7d2d88cb05dc5c72 = L.circleMarker(
+                [40.755082, -73.990415],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_22618d441f5271cb7d2d88cb05dc5c72.bindTooltip(
+                `<div>
+                     Zona: Midtown-DOT<br>Valor: 17.64<br>Categoría: Bueno<br>Hora: 18:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7da29893a91048a051396b293f4543bd = L.circleMarker(
+                [40.845167, -73.906143],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_7da29893a91048a051396b293f4543bd.bindTooltip(
+                `<div>
+                     Zona: Cross Bronx Expy<br>Valor: 10.37<br>Categoría: Bueno<br>Hora: 18:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9950745a9a07440265a5f1d2151259db = L.circleMarker(
+                [40.718073, -73.986059],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_9950745a9a07440265a5f1d2151259db.bindTooltip(
+                `<div>
+                     Zona: Williamsburg Bridge<br>Valor: 10.37<br>Categoría: Bueno<br>Hora: 18:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b8d1f521c8c0c5d5d6828d6d5ef2e4b8 = L.circleMarker(
+                [40.75069, -73.98783],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_b8d1f521c8c0c5d5d6828d6d5ef2e4b8.bindTooltip(
+                `<div>
+                     Zona: Broadway/35th St<br>Valor: 9.05<br>Categoría: Bueno<br>Hora: 18:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_894337ea0649d80d487ed1ab278d1837 = L.circleMarker(
+                [40.722288, -73.974651],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_894337ea0649d80d487ed1ab278d1837.bindTooltip(
+                `<div>
+                     Zona: FDR<br>Valor: 2.35<br>Categoría: Bueno<br>Hora: 18:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cb0feb3a62e2deb3c644e53c41188222 = L.circleMarker(
+                [40.690155, -73.80908],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_cb0feb3a62e2deb3c644e53c41188222.bindTooltip(
+                `<div>
+                     Zona: Van Wyck<br>Valor: 8.17<br>Categoría: Bueno<br>Hora: 18:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c140c9ffafbfd0cca554afda5f37e71e = L.circleMarker(
+                [40.609209, -74.151182],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_c140c9ffafbfd0cca554afda5f37e71e.bindTooltip(
+                `<div>
+                     Zona: SI Expwy<br>Valor: 9.06<br>Categoría: Bueno<br>Hora: 18:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_46a278af677e6070fa05f5db5234fdb5 = L.circleMarker(
+                [40.806486, -73.922487],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_46a278af677e6070fa05f5db5234fdb5.bindTooltip(
+                `<div>
+                     Zona: Mott Haven<br>Valor: 8.8<br>Categoría: Bueno<br>Hora: 18:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_80cb42c518e5ee17dd62cbbdd4d5c2a7 = L.circleMarker(
+                [40.702798, -73.960824],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_80cb42c518e5ee17dd62cbbdd4d5c2a7.bindTooltip(
+                `<div>
+                     Zona: BQE<br>Valor: 9.32<br>Categoría: Bueno<br>Hora: 18:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1acf7ef39be004e54f6ca080b7e2c3cc = L.circleMarker(
+                [40.71651, -73.997004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_1acf7ef39be004e54f6ca080b7e2c3cc.bindTooltip(
+                `<div>
+                     Zona: Manhattan Bridge<br>Valor: 9.82<br>Categoría: Bueno<br>Hora: 19:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fcaab0a0cb868173e1b486614f3b292e = L.circleMarker(
+                [40.755082, -73.990415],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_fcaab0a0cb868173e1b486614f3b292e.bindTooltip(
+                `<div>
+                     Zona: Midtown-DOT<br>Valor: 15.9<br>Categoría: Bueno<br>Hora: 19:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6a8a82e4c5b53f3057851918cee19030 = L.circleMarker(
+                [40.761234, -73.963886],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_6a8a82e4c5b53f3057851918cee19030.bindTooltip(
+                `<div>
+                     Zona: Queensboro Bridge<br>Valor: 7.19<br>Categoría: Bueno<br>Hora: 19:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2e9c64356730d8bbbb13e6b0be7297cf = L.circleMarker(
+                [40.718073, -73.986059],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_2e9c64356730d8bbbb13e6b0be7297cf.bindTooltip(
+                `<div>
+                     Zona: Williamsburg Bridge<br>Valor: 8.57<br>Categoría: Bueno<br>Hora: 19:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3f0ddf39467eeb15974bf0c87ce41c3e = L.circleMarker(
+                [40.737107, -73.821556],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_3f0ddf39467eeb15974bf0c87ce41c3e.bindTooltip(
+                `<div>
+                     Zona: Queens College<br>Valor: 7.47<br>Categoría: Bueno<br>Hora: 19:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2c6ec5b2753a39b781145f6b53228986 = L.circleMarker(
+                [40.845167, -73.906143],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_2c6ec5b2753a39b781145f6b53228986.bindTooltip(
+                `<div>
+                     Zona: Cross Bronx Expy<br>Valor: 8.12<br>Categoría: Bueno<br>Hora: 19:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5365b98a91ce4ba0458762a5fd4f3ae0 = L.circleMarker(
+                [40.702798, -73.960824],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_5365b98a91ce4ba0458762a5fd4f3ae0.bindTooltip(
+                `<div>
+                     Zona: BQE<br>Valor: 7.56<br>Categoría: Bueno<br>Hora: 19:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f63f167a9ab2723670d22f6aecee5a42 = L.circleMarker(
+                [40.806486, -73.922487],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_f63f167a9ab2723670d22f6aecee5a42.bindTooltip(
+                `<div>
+                     Zona: Mott Haven<br>Valor: 7.4<br>Categoría: Bueno<br>Hora: 19:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f434a2b15d997d1f79012a1b4dcb497e = L.circleMarker(
+                [40.722288, -73.974651],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_f434a2b15d997d1f79012a1b4dcb497e.bindTooltip(
+                `<div>
+                     Zona: FDR<br>Valor: 2.2<br>Categoría: Bueno<br>Hora: 19:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7c6e73a2a4fe41731eb51c95cc3fa49e = L.circleMarker(
+                [40.690155, -73.80908],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_7c6e73a2a4fe41731eb51c95cc3fa49e.bindTooltip(
+                `<div>
+                     Zona: Van Wyck<br>Valor: 8.79<br>Categoría: Bueno<br>Hora: 19:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_25c1be94fe7a7e8212eb159d7e277d23 = L.circleMarker(
+                [40.609209, -74.151182],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_25c1be94fe7a7e8212eb159d7e277d23.bindTooltip(
+                `<div>
+                     Zona: SI Expwy<br>Valor: 8.91<br>Categoría: Bueno<br>Hora: 19:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_95e530a3ce424affe3775cfa1792530e = L.circleMarker(
+                [40.75069, -73.98783],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_95e530a3ce424affe3775cfa1792530e.bindTooltip(
+                `<div>
+                     Zona: Broadway/35th St<br>Valor: 7.57<br>Categoría: Bueno<br>Hora: 19:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2adf86cebb6e5617e9e827507fc84be3 = L.circleMarker(
+                [40.761234, -73.963886],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_2adf86cebb6e5617e9e827507fc84be3.bindTooltip(
+                `<div>
+                     Zona: Queensboro Bridge<br>Valor: 6.86<br>Categoría: Bueno<br>Hora: 20:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_76bd57427717b5a3d2a76da346ab3a91 = L.circleMarker(
+                [40.845167, -73.906143],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_76bd57427717b5a3d2a76da346ab3a91.bindTooltip(
+                `<div>
+                     Zona: Cross Bronx Expy<br>Valor: 7.5<br>Categoría: Bueno<br>Hora: 20:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_460ae261d90236106d7bab2684f31b0c = L.circleMarker(
+                [40.755082, -73.990415],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_460ae261d90236106d7bab2684f31b0c.bindTooltip(
+                `<div>
+                     Zona: Midtown-DOT<br>Valor: 13.15<br>Categoría: Bueno<br>Hora: 20:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9dbb51230cbb6cddda7737eac7601011 = L.circleMarker(
+                [40.718073, -73.986059],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_9dbb51230cbb6cddda7737eac7601011.bindTooltip(
+                `<div>
+                     Zona: Williamsburg Bridge<br>Valor: 8.2<br>Categoría: Bueno<br>Hora: 20:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2a463e8f773a4add1237eb982b8d6bbb = L.circleMarker(
+                [40.75069, -73.98783],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_2a463e8f773a4add1237eb982b8d6bbb.bindTooltip(
+                `<div>
+                     Zona: Broadway/35th St<br>Valor: 7.24<br>Categoría: Bueno<br>Hora: 20:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9ae5f5cfbcb1b985e26156fdc7646783 = L.circleMarker(
+                [40.737107, -73.821556],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_9ae5f5cfbcb1b985e26156fdc7646783.bindTooltip(
+                `<div>
+                     Zona: Queens College<br>Valor: 6.92<br>Categoría: Bueno<br>Hora: 20:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8f5d85850ba394c6d1f8f8b67d96b6d1 = L.circleMarker(
+                [40.71651, -73.997004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_8f5d85850ba394c6d1f8f8b67d96b6d1.bindTooltip(
+                `<div>
+                     Zona: Manhattan Bridge<br>Valor: 9.0<br>Categoría: Bueno<br>Hora: 20:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8bee84075874b16fb66193b4fafa2eb7 = L.circleMarker(
+                [40.722288, -73.974651],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_8bee84075874b16fb66193b4fafa2eb7.bindTooltip(
+                `<div>
+                     Zona: FDR<br>Valor: 7.59<br>Categoría: Bueno<br>Hora: 20:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aa4365bf27ef7464d1774b62c04bb572 = L.circleMarker(
+                [40.690155, -73.80908],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_aa4365bf27ef7464d1774b62c04bb572.bindTooltip(
+                `<div>
+                     Zona: Van Wyck<br>Valor: 8.01<br>Categoría: Bueno<br>Hora: 20:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bd04afb72ab616abc88a7e881cc6a6e4 = L.circleMarker(
+                [40.609209, -74.151182],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_bd04afb72ab616abc88a7e881cc6a6e4.bindTooltip(
+                `<div>
+                     Zona: SI Expwy<br>Valor: 7.82<br>Categoría: Bueno<br>Hora: 20:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4d5bfa32027127a84880b45904c81ca1 = L.circleMarker(
+                [40.702798, -73.960824],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_4d5bfa32027127a84880b45904c81ca1.bindTooltip(
+                `<div>
+                     Zona: BQE<br>Valor: 6.93<br>Categoría: Bueno<br>Hora: 20:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_77ad5647fe260b08825add6f44984c96 = L.circleMarker(
+                [40.806486, -73.922487],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_77ad5647fe260b08825add6f44984c96.bindTooltip(
+                `<div>
+                     Zona: Mott Haven<br>Valor: 7.17<br>Categoría: Bueno<br>Hora: 20:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_540466864d14ad6213e73d0864a9d2be = L.circleMarker(
+                [40.755082, -73.990415],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_540466864d14ad6213e73d0864a9d2be.bindTooltip(
+                `<div>
+                     Zona: Midtown-DOT<br>Valor: 14.26<br>Categoría: Bueno<br>Hora: 21:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_216f78e2d24c206402964ef2e43a79b7 = L.circleMarker(
+                [40.761234, -73.963886],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_216f78e2d24c206402964ef2e43a79b7.bindTooltip(
+                `<div>
+                     Zona: Queensboro Bridge<br>Valor: 6.91<br>Categoría: Bueno<br>Hora: 21:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c2c308dd92fcd63f7dac12da89b08678 = L.circleMarker(
+                [40.718073, -73.986059],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_c2c308dd92fcd63f7dac12da89b08678.bindTooltip(
+                `<div>
+                     Zona: Williamsburg Bridge<br>Valor: 7.91<br>Categoría: Bueno<br>Hora: 21:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_88d7d0ba1c9be0752d2c4c559f08e4ba = L.circleMarker(
+                [40.737107, -73.821556],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_88d7d0ba1c9be0752d2c4c559f08e4ba.bindTooltip(
+                `<div>
+                     Zona: Queens College<br>Valor: 6.93<br>Categoría: Bueno<br>Hora: 21:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_186df159129646f95dd4276d719c3465 = L.circleMarker(
+                [40.71651, -73.997004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_186df159129646f95dd4276d719c3465.bindTooltip(
+                `<div>
+                     Zona: Manhattan Bridge<br>Valor: 8.68<br>Categoría: Bueno<br>Hora: 21:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_768f7acb5f302657a9b802e6a4eef9ed = L.circleMarker(
+                [40.845167, -73.906143],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_768f7acb5f302657a9b802e6a4eef9ed.bindTooltip(
+                `<div>
+                     Zona: Cross Bronx Expy<br>Valor: 8.08<br>Categoría: Bueno<br>Hora: 21:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8fdf41efe2e099a473c1722bf2bfd204 = L.circleMarker(
+                [40.722288, -73.974651],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_8fdf41efe2e099a473c1722bf2bfd204.bindTooltip(
+                `<div>
+                     Zona: FDR<br>Valor: 7.85<br>Categoría: Bueno<br>Hora: 21:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e8055f15762c86cb23a88f9b2448d5c7 = L.circleMarker(
+                [40.690155, -73.80908],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_e8055f15762c86cb23a88f9b2448d5c7.bindTooltip(
+                `<div>
+                     Zona: Van Wyck<br>Valor: 7.14<br>Categoría: Bueno<br>Hora: 21:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ec9cbd15c047c3b41f41018924da757d = L.circleMarker(
+                [40.609209, -74.151182],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_ec9cbd15c047c3b41f41018924da757d.bindTooltip(
+                `<div>
+                     Zona: SI Expwy<br>Valor: 7.87<br>Categoría: Bueno<br>Hora: 21:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fe4d6f2d99ab0cc883f8040d538e29e7 = L.circleMarker(
+                [40.75069, -73.98783],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_fe4d6f2d99ab0cc883f8040d538e29e7.bindTooltip(
+                `<div>
+                     Zona: Broadway/35th St<br>Valor: 7.31<br>Categoría: Bueno<br>Hora: 21:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_404029cbb8afafdf7abade945eebbbd2 = L.circleMarker(
+                [40.702798, -73.960824],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_404029cbb8afafdf7abade945eebbbd2.bindTooltip(
+                `<div>
+                     Zona: BQE<br>Valor: 6.61<br>Categoría: Bueno<br>Hora: 21:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d01f483e7c51b1df327a7c27e518bede = L.circleMarker(
+                [40.806486, -73.922487],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_d01f483e7c51b1df327a7c27e518bede.bindTooltip(
+                `<div>
+                     Zona: Mott Haven<br>Valor: 7.59<br>Categoría: Bueno<br>Hora: 21:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_99cdff5e3fecacdb0adc86451e0b5637 = L.circleMarker(
+                [40.71651, -73.997004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_99cdff5e3fecacdb0adc86451e0b5637.bindTooltip(
+                `<div>
+                     Zona: Manhattan Bridge<br>Valor: 9.7<br>Categoría: Bueno<br>Hora: 22:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_77b3538c7d064816abf61de0ee695277 = L.circleMarker(
+                [40.755082, -73.990415],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_77b3538c7d064816abf61de0ee695277.bindTooltip(
+                `<div>
+                     Zona: Midtown-DOT<br>Valor: 14.29<br>Categoría: Bueno<br>Hora: 22:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3f011dd77afd284433f0fe8abe1bf9c4 = L.circleMarker(
+                [40.761234, -73.963886],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_3f011dd77afd284433f0fe8abe1bf9c4.bindTooltip(
+                `<div>
+                     Zona: Queensboro Bridge<br>Valor: 7.7<br>Categoría: Bueno<br>Hora: 22:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_839f2bf2856ce7fc6a605472f6432c30 = L.circleMarker(
+                [40.718073, -73.986059],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_839f2bf2856ce7fc6a605472f6432c30.bindTooltip(
+                `<div>
+                     Zona: Williamsburg Bridge<br>Valor: 8.61<br>Categoría: Bueno<br>Hora: 22:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b081edbd6c0fcf4f0a39119e9c39bb52 = L.circleMarker(
+                [40.737107, -73.821556],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_b081edbd6c0fcf4f0a39119e9c39bb52.bindTooltip(
+                `<div>
+                     Zona: Queens College<br>Valor: 7.38<br>Categoría: Bueno<br>Hora: 22:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1dab5a0de882be9723a71f7bae93fa84 = L.circleMarker(
+                [40.845167, -73.906143],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_1dab5a0de882be9723a71f7bae93fa84.bindTooltip(
+                `<div>
+                     Zona: Cross Bronx Expy<br>Valor: 9.45<br>Categoría: Bueno<br>Hora: 22:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8a12fe9058d7b457cf1dabb2978252ca = L.circleMarker(
+                [40.75069, -73.98783],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_8a12fe9058d7b457cf1dabb2978252ca.bindTooltip(
+                `<div>
+                     Zona: Broadway/35th St<br>Valor: 7.66<br>Categoría: Bueno<br>Hora: 22:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0476b0e10f4a84bb81b41c2db2e86671 = L.circleMarker(
+                [40.722288, -73.974651],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_0476b0e10f4a84bb81b41c2db2e86671.bindTooltip(
+                `<div>
+                     Zona: FDR<br>Valor: 7.91<br>Categoría: Bueno<br>Hora: 22:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2baccf7b233199ed9bae9a4d6045456d = L.circleMarker(
+                [40.690155, -73.80908],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_2baccf7b233199ed9bae9a4d6045456d.bindTooltip(
+                `<div>
+                     Zona: Van Wyck<br>Valor: 6.92<br>Categoría: Bueno<br>Hora: 22:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2b881ddab6ceeffa9fcc9f9420cd0f6b = L.circleMarker(
+                [40.609209, -74.151182],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_2b881ddab6ceeffa9fcc9f9420cd0f6b.bindTooltip(
+                `<div>
+                     Zona: SI Expwy<br>Valor: 8.74<br>Categoría: Bueno<br>Hora: 22:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2bf346fb48de5b5e9760e5a91479fd62 = L.circleMarker(
+                [40.702798, -73.960824],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_2bf346fb48de5b5e9760e5a91479fd62.bindTooltip(
+                `<div>
+                     Zona: BQE<br>Valor: 7.88<br>Categoría: Bueno<br>Hora: 22:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_052bae74d9c8c100730b603458caac11 = L.circleMarker(
+                [40.806486, -73.922487],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_052bae74d9c8c100730b603458caac11.bindTooltip(
+                `<div>
+                     Zona: Mott Haven<br>Valor: 8.06<br>Categoría: Bueno<br>Hora: 22:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_80960ed51599695810f4c16d577f6fb5 = L.circleMarker(
+                [40.845167, -73.906143],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_80960ed51599695810f4c16d577f6fb5.bindTooltip(
+                `<div>
+                     Zona: Cross Bronx Expy<br>Valor: 9.46<br>Categoría: Bueno<br>Hora: 23:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a3aa3448aa9ba96c089939d38f99d8f9 = L.circleMarker(
+                [40.71651, -73.997004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_a3aa3448aa9ba96c089939d38f99d8f9.bindTooltip(
+                `<div>
+                     Zona: Manhattan Bridge<br>Valor: 9.73<br>Categoría: Bueno<br>Hora: 23:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_83f6fbfc0cb9579189e18b113771a38e = L.circleMarker(
+                [40.761234, -73.963886],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_83f6fbfc0cb9579189e18b113771a38e.bindTooltip(
+                `<div>
+                     Zona: Queensboro Bridge<br>Valor: 8.73<br>Categoría: Bueno<br>Hora: 23:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_78eb341cb149b6798a2b47156833c76c = L.circleMarker(
+                [40.718073, -73.986059],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_78eb341cb149b6798a2b47156833c76c.bindTooltip(
+                `<div>
+                     Zona: Williamsburg Bridge<br>Valor: 8.15<br>Categoría: Bueno<br>Hora: 23:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0948a81030376b0212a38a7dc4bb8b67 = L.circleMarker(
+                [40.737107, -73.821556],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_0948a81030376b0212a38a7dc4bb8b67.bindTooltip(
+                `<div>
+                     Zona: Queens College<br>Valor: 8.16<br>Categoría: Bueno<br>Hora: 23:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_24bdfba442732eada57b3477d7398aa4 = L.circleMarker(
+                [40.755082, -73.990415],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_24bdfba442732eada57b3477d7398aa4.bindTooltip(
+                `<div>
+                     Zona: Midtown-DOT<br>Valor: 16.34<br>Categoría: Bueno<br>Hora: 23:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9afea0944e600ebf000a61f0be651bca = L.circleMarker(
+                [40.75069, -73.98783],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_9afea0944e600ebf000a61f0be651bca.bindTooltip(
+                `<div>
+                     Zona: Broadway/35th St<br>Valor: 8.62<br>Categoría: Bueno<br>Hora: 23:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7d25b2f6481637ee7758100e53d67893 = L.circleMarker(
+                [40.722288, -73.974651],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_7d25b2f6481637ee7758100e53d67893.bindTooltip(
+                `<div>
+                     Zona: FDR<br>Valor: 7.99<br>Categoría: Bueno<br>Hora: 23:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e54f1b42fb5cd7e2faf67ad52cdeebfb = L.circleMarker(
+                [40.690155, -73.80908],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_e54f1b42fb5cd7e2faf67ad52cdeebfb.bindTooltip(
+                `<div>
+                     Zona: Van Wyck<br>Valor: 7.31<br>Categoría: Bueno<br>Hora: 23:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4df84cf4476d16eec066cdb73e2e2df4 = L.circleMarker(
+                [40.609209, -74.151182],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_4df84cf4476d16eec066cdb73e2e2df4.bindTooltip(
+                `<div>
+                     Zona: SI Expwy<br>Valor: 9.01<br>Categoría: Bueno<br>Hora: 23:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_95d614723cdc8a9e7ce4ee4314fc6a91 = L.circleMarker(
+                [40.702798, -73.960824],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_95d614723cdc8a9e7ce4ee4314fc6a91.bindTooltip(
+                `<div>
+                     Zona: BQE<br>Valor: 8.09<br>Categoría: Bueno<br>Hora: 23:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3b21048fdb3cb94e8ce0352428c254e2 = L.circleMarker(
+                [40.806486, -73.922487],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_604c0565d02eb6034a8e6a1b0a8cb662);
+        
+    
+            circle_marker_3b21048fdb3cb94e8ce0352428c254e2.bindTooltip(
+                `<div>
+                     Zona: Mott Haven<br>Valor: 8.62<br>Categoría: Bueno<br>Hora: 23:00
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
