@@ -1,0 +1,143 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #4a90e2, #9013fe);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Secciones */
+section {
+    margin-bottom: 20px;
+}
+
+/* Formulario */
+form {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* Input y botón */
+form input, form button {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+}
+
+input[type="file"] {
+    color: #fff;
+    background: #4a90e2;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+input[type="file"]::before {
+    content: 'Seleccionar archivo';
+    display: inline-block;
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+input[type="file"]:hover::before {
+    background: #3a78c2;
+}
+
+button {
+    color: #fff;
+    background: #9013fe;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: #720dd4;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    form {
+        padding: 1.5rem;
+    }
+
+    input[type="file"]::before,
+    button {
+        font-size: 0.9rem;
+    }
+}
+
+.custom-file-label {
+    display: inline-block;
+    background: #4a90e2;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.custom-file-label:hover {
+    background: #3a78c2;
+}
+
+.progress-container {
+    margin-top: 20px;
+    text-align: center;
+    display: none; /* Oculta la barra hasta que comience la subida */
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #f3f3f3;
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background: linear-gradient(135deg, #4a90e2, #9013fe);
+    border-radius: 10px;
+}
+
+#progressText {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #fff;
+}

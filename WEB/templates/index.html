@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Archivo - Taxis New York - Consultora Data</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script>
+        async function uploadFile(event) {
+            event.preventDefault();
+
+            const fileInput = document.querySelector('input[name="file"]');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert("Por favor, selecciona un archivo para subir.");  
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const response = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                const message = await response.text();
+                alert(message);
+            } catch (error) {
+                alert("Ocurrió un error al subir el archivo.");
+                console.error(error);
+            }
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <section>
+            <img src="/static/resources/LogoTaxiCom.png" alt="Logo de Taxis New York">
+            <img src="/static/resources/LogoConsultora.jpg" alt="Logo de Connect Data">
+        </section>
+        <section>
+            <form id="uploadForm" onsubmit="uploadFile(event)">
+                <label for="fileInput" class="custom-file-label">Seleccionar archivo</label>
+                <input type="file" id="fileInput" name="file" required style="display: none;">
+                <button type="submit">Subir</button>
+                <div class="progress-container">
+                    <progress id="progressBar" value="0" max="100"></progress>
+                    <span id="progressText">0%</span>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function () {
+            const fileName = this.files[0] ? this.files[0].name : 'Seleccionar archivo';
+            document.querySelector('.custom-file-label').textContent = fileName;
+        });
+        
+        function uploadFile(event) {
+            event.preventDefault();
+        
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+        
+            if (!file) {
+                alert("Por favor, selecciona un archivo para subir.");
+                return;
+            }
+        
+            const progressBar = document.getElementById('progressBar');
+            const progressText = document.getElementById('progressText');
+            const progressContainer = document.querySelector('.progress-container');
+        
+            progressBar.value = 0;
+            progressText.textContent = '0%';
+            progressContainer.style.display = 'block';
+        
+            const xhr = new XMLHttpRequest();
+        
+            xhr.open('POST', '/upload', true);
+        
+            xhr.upload.onprogress = function (event) {
+                if (event.lengthComputable) {
+                    const percentComplete = Math.round((event.loaded / event.total) * 100);
+                    progressBar.value = percentComplete;
+                    progressText.textContent = `${percentComplete}%`;
+                }
+            };
+        
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    alert(xhr.responseText);
+                    fileInput.value = '';
+                    document.querySelector('.custom-file-label').textContent = 'Seleccionar archivo';
+                    progressContainer.style.display = 'none';
+                } else {
+                    alert("Error al subir el archivo.");
+                }
+            };
+        
+            xhr.onerror = function () {
+                alert("Error al subir el archivo.");
+            };
+        
+            const formData = new FormData();
+            formData.append('file', file);
+        
+            xhr.send(formData);
+        }
+    </script>
+</body>
+</html>
