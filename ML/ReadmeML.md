@@ -1,6 +1,6 @@
 # Readme appis. Machine Learning. 
 
-En las siguientes apis han sido desarrolladas utilizando dos plataformas: render y streamlit. En ambas apis se desarrolla tanto la visualización como el desarrollo de modelos de Machine Learning con el fin de presentar analisis e insihgt robustos. A continuación se desarrollarán las apis.
+Las siguientes apis han sido desarrolladas utilizando dos plataformas: render y streamlit. En ambas apis se desarrolla tanto la visualización como el desarrollo de modelos de Machine Learning con el fin de presentar analisis e insihgt robustos. A continuación se desarrollarán las apis.
 
 ### App de autos electricos en Streamlit. Analisis de la App para el negocio
 
