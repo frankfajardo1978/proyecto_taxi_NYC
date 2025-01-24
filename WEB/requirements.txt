@@ -1,0 +1,14 @@
+Flask
+google-api-core
+google-auth
+google-cloud-core
+google-cloud-storage
+google-crc32c
+google-pasta
+google-resumable-media
+googleapis-common-protos
+json5
+jsonpointer
+jsonschema
+jsonschema-specifications
+gunicorn

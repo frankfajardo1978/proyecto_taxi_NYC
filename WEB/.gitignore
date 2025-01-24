@@ -1,0 +1,4 @@
+# Ignorar credenciales
+service-account-key.json
+service-account-key-PF.json
+.DS_Store
