@@ -154,6 +154,8 @@ Esta segunda reunión con nuestro cliente Taxicom 2.0 tiene el objetivo de mostr
 
 ## Extracción,tranformación y carga de datos
 
+![Ciclo de vida del dato](CicloDato.png)
+
 En esta primera parte veremos el ciclo de vida del dato. Explicación de los pasos en el VIDEO:  
 
 https://www.youtube.com/watch?v=PlCpHxi0iw0
@@ -188,6 +190,8 @@ https://www.youtube.com/watch?v=PlCpHxi0iw0
 - Carga incremental: para el proceso de  carga incremental se uso una funcion llamada  calculate_file_hash, que se usa para detectar archivos unicos y evitar duplicados; el algoritmo que se uso en la funcion fue SHA256 que verifica la integradad de los dato en 256 bits.
 
 ### Interfaz Web para Subida de Archivos a Google Cloud
+
+Esta interfaz para subir archivos es una solución secundaria y de manera local para opearaciones manuales. La carga automatica se plantea más adelante. 
 
 1. Descripción General: Este proyecto implementa una interfaz web utilizando *Flask* para facilitar la subida de archivos a Google Cloud Storage. Su propósito es ofrecer un sistema sencillo y accesible para que el cliente pueda cargar datos desde un medio local, automatizando la conexión con Google Cloud y la ejecución de un proceso ETL (Extract, Transform, Load).
 2. Características Principales
@@ -327,4 +331,336 @@ Estado actual de los objetivos establecidos y su nivel de cumplimiento.
 - Generar un espacio de preguntas y respuestas acerca del contenido explorado.
 
 
+# Sprint 3
 
+Este tercer sprint comienza con las mejoras propuestas por el cliente en cuanto automatización del ETL, diagrama entidad relación y los entregables. Finalizaremos proponiendo una conclusión y recomendaciones. 
+
+## Carga de Datasets a Google Cloud Platform
+Cabe aclarar que la carga de los datos propuesta por la interfaz es un recurso secundario como quedo descripto anteriormente. 
+A continuación se muestra la carga automatizada de los datos a la nube.
+La función *upload_file_from_urls* permite la carga automática de datasets a un bucket de Google Cloud Storage a partir de URLs especificadas. Esta función es activada mediante una solicitud HTTP que recibe un cuerpo JSON con la lista de archivos a cargar. El formato del JSON es el siguiente:
+
+```json
+{
+    "files": [
+        {"url": "https://zenodo.org/records/3966543/files/annotations.csv"},
+        {"url": "https://data.cityofnewyork.us/resource/c3uy-2p5r.csv"},
+        {"url": "https://drive.google.com/uc?export=download&id=1Ce6EfarGcSFzJdPIR27i-SesrAJ2NxfO", "destination_name": "taxi_zone_merged_with_locations.csv"},
+        {"url": "https://drive.google.com/uc?export=download&id=1vB6o_AqFQpZOSfNnzL2lnFGiklx0oIpT", "destination_name": "ElectricCarData.csv"},
+        {"url": "https://drive.google.com/uc?export=download&id=1kuHtg9Ua-bhpSrxyHmeFcTjSyT197xWI", "destination_name": "green_tripdata_2024-10_reducido.csv"},
+        {"url": "https://drive.google.com/uc?export=download&id=1PvjKWGqBN47umcbaCXzcqn1ggEmD7ocX", "destination_name": "Yellow_Tripdata_2024-10_reducido.csv"},
+        {"url": "https://drive.google.com/uc?export=download&id=1sh8jhrl8ktl3fzYM15aOuC4E-b8P8YUU", "destination_name": "verde.parquet"},
+        {"url": "https://drive.google.com/uc?export=download&id=1cgcXfLv_MuTrGW1dFhtwAWTaZiBKQi2m", "destination_name": "taxi_zone_lookup.csv"}
+    ]
+}
+```
+
+Esta estructura permite especificar tanto la URL del archivo como un nombre de destino opcional para su almacenamiento en el bucket.
+
+---
+
+### ETL y Creación de Tablas y Datasets en BigQuery
+
+Después de que los archivos se cargan en el bucket, la función *create_dataset_and_table_and_move_data_bq* ejecuta un proceso de ETL que transforma y prepara los datos para su almacenamiento en BigQuery. Los pasos del proceso son:
+
+- Normalización de nombres de columnas.
+- Eliminación de espacios innecesarios.
+- Conversión de texto a minúsculas.
+- Eliminación de caracteres no compatibles con BigQuery.
+
+Los datos transformados se almacenan en la carpeta *"transformed"* dentro del mismo bucket antes de transferirse a BigQuery, donde se crean las tablas con una estructura estandarizada y los metadatos correspondientes.
+
+---
+
+### Automatización del Proceso
+
+La automatización de todo el flujo está gestionada por Google Cloud Scheduler. Este servicio activa la función mediante un objetivo HTTP con un método POST que utiliza un cuerpo JSON para ejecutar la carga y procesamiento de datos de manera programada. Esto garantiza un flujo continuo y eficiente para la gestión de grandes volúmenes de datos en la nube.
+Nuestra función create_dataset_and_table_and_move_data_bq incluye el proceso de hash SHA256 de la biblioteca hash, lo que garantiza que los datos subidos a nuestro bucket no se dupliquen. Este mecanismo reconoce y procesa únicamente los datos nuevos, incluso en archivos con el mismo nombre. De esta manera, nuestras tablas en BigQuery se actualizan incorporando únicamente las nuevas filas a las ya existentes.
+
+## Diagrama entidad relación
+
+![Diagrama de entidad relacion](ER.jpg)
+
+
+El siguiente diagrama entidad relación es un modelo en formato de copo de nieve (Snowflake Schema) debido a lo siguiente:
+
+- Presencia de varias tablas relacionadas en una jerarquía: En un esquema en estrella, las dimensiones suelen ser desnormalizadas, con toda la información en una sola tabla por dimensión. Aquí, parece que hay algunas dimensiones más normalizadas y divididas en varias tablas relacionadas (por ejemplo, "CoordenadasZonas" y "Zona_Taxis").
+
+- Mayor normalización: Algunas tablas, como "Fecha" y "CoordenadasZonas", están diseñadas para almacenar atributos específicos y están separadas en entidades independientes. Esto es característico de un esquema en copo de nieve, donde las dimensiones están normalizadas para reducir redundancias.
+
+- Relaciones múltiples: Existen muchas conexiones entre tablas, lo que refleja un enfoque más relacional y estructurado, típico del esquema en copo de nieve.
+
+
+Ahora pasaremos a mostrar las relaciones de este modelo de entidad-relación, el cual refleja un enfoque integral para analizar el transporte urbano, combinando diversos aspectos como datos de viajes en taxis, características de vehículos, combustibles alternativos y eficiencia ambiental. Al unir información geográfica, temporal y técnica, se genera una herramienta poderosa para comprender patrones de movilidad, identificar áreas de mejora en la sostenibilidad y fomentar decisiones más informadas.
+La reflexión principal que surge de este modelo es la importancia de la integración de datos para abordar problemas complejos como la transición hacia sistemas de transporte más ecológicos. Por ejemplo:
+
++ Sostenibilidad: La conexión entre los datos de vehículos eléctricos, combustibles alternativos y emisiones de CO2 muestra un interés claro en evaluar cómo las nuevas tecnologías pueden reducir el impacto ambiental del transporte.
++ Análisis geográfico y social: La relación entre las zonas, coordenadas y viajes en taxis permite identificar tendencias locales en la movilidad, como la demanda por zonas específicas o las emisiones asociadas a diferentes áreas de la ciudad.
++ Decisiones basadas en datos: Este tipo de modelo no solo permite comprender el presente, sino también anticipar el futuro. Con esta información, se podrían diseñar políticas públicas, optimizar rutas de transporte, y fomentar la adopción de vehículos eléctricos o combustibles limpios.
+
+A continuación de mostrará una descripción de las relaciones: 
+
+1. Tablas principales relacionadas con taxis:
+	+ Taxis_Verdes y Taxis_Amarillos están conectadas con la tabla Zona_Taxis mediante el campo ID_Zona_Bajada. Esto indica que ambas tablas de taxis están relacionadas con las zonas donde se realiza la bajada de pasajeros.
+	+ Ambas tablas de taxis también están conectadas a la tabla Fecha mediante el campo Día_Mes, lo que permite analizar datos de viajes en función de fechas específicas.
+
+2. Zona y coordenadas:
+	+ La tabla Zona_Taxis está relacionada con la tabla CoordenadasZonas mediante un identificador, probablemente el campo Zona o LocationID, lo que permite asignar coordenadas geográficas a cada zona de taxis.
+
+3. Relaciones de vehículos eléctricos y emisiones:
+	+ La tabla Fuel_Economy se conecta a Data_Autos_Electricos a través de un campo como Modelo, permitiendo analizar las emisiones de CO2 y la eficiencia de los vehículos eléctricos.
+	+ Fuel_Economy también se conecta con la tabla Autos_Electricosy_Alternativos, sugiriendo una relación para obtener información adicional sobre combustibles alternativos.
+
+4. Relación entre vehículos ligeros y combustibles:
+	+ Vehiculos_Ligeros está vinculada a la tabla Combustibles_Alternativos para analizar el rango, tipo y categoría de los vehículos que utilizan combustibles alternativos.
+
+5. Relaciones temporales: 
+	+ La tabla Fecha juega un papel crucial, conectándose con varias tablas como Taxis_Verdes, Taxis_Amarillos, y posiblemente otras, para analizar datos temporalmente (día, mes, año, semanas).
+
+En resumen, este modelo no es solo una representación técnica, sino una herramienta que tiene el potencial de transformar las ciudades en espacios más inteligentes, sostenibles y enfocados en el bienestar de las personas. La integración de datos en sistemas complejos nos recuerda que las mejores soluciones surgen cuando combinamos tecnología, análisis y un compromiso ético con el medio ambiente y la sociedad.
+
+## Machine Learning. 
+Los modelos que han sido seleccinados son dos. Ambos reunen elementos de las propuestas planteadas en las sprint anteriores.
+Cabe señalar que las siguientes apis han sido desarrolladas utilizando dos plataformas: render y streamlit. En ambas apis se desarrolla tanto la visualización como el desarrollo de modelos de Machine Learning con el fin de presentar analisis e insihgt robustos. A continuación se desarrollarán las apis.
+
+### App de autos electricos en Streamlit. Analisis de la App para el negocio
+
+Url app: https://taxicom2.streamlit.app/ 
+
+1. Comparación de Marcas y Modelos
+Funcionalidad:
+Esta sección permite a los usuarios comparar marcas y modelos de vehículos eléctricos basándose en métricas clave como:
+- Aceleración (accel): Indicador de la capacidad del vehículo para responder rápidamente.
+- Velocidad máxima (topspeed): Útil para trayectos largos o zonas con autopistas.
+- Autonomía (range): Mide cuánto puede viajar un vehículo con una sola carga, esencial para taxis que operan muchas horas al día.
+- Eficiencia (efficiency): Kilómetros por kilovatio hora, indicador de costos operativos.
+- Precio en USD (priceusd): Factor clave para evaluar el retorno de inversión (ROI).
+
+Insight para el negocio:
+- Optimización de flota: Ayuda a los propietarios de negocios de taxis a elegir vehículos que maximicen la autonomía y minimicen los costos operativos.
+- Selección informada: Facilita decisiones sobre qué modelos son más rentables para operaciones prolongadas.
+- Competitividad: Permite comparar directamente vehículos de fabricantes reconocidos como Tesla, BMW, o Polestar.
+
+2. Recomendaciones
+
+Funcionalidad:
+- Mediante un algoritmo de clustering (DBSCAN), la app identifica vehículos similares en función de las variables seleccionadas. Esto permite al usuario encontrar alternativas a su modelo actual que se ajusten a necesidades específicas.
+
+Insight para el negocio:
+- Diversificación de opciones: Ofrece sugerencias sobre modelos similares que pueden ser más económicos o tener características específicas deseadas, como mayor eficiencia o menor costo inicial.
+- Reducción del riesgo de decisión: Ayuda a los propietarios a explorar modelos confiables dentro de un mismo segmento.
+Escalabilidad: Si un modelo resulta ser eficiente, se pueden identificar otros modelos en el mismo clúster para expandir la flota.
+
+3. Predicción de Amortización
+
+Funcionalidad:
+Esta sección estima el tiempo necesario para que un taxi recupere su costo inicial (amortización), basándose en:
+- Precio del vehículo.
+- Ingresos diarios promedio calculados a partir de datos históricos.
+- Ganancias netas ajustadas al porcentaje real que queda después de costos operativos.
+
+Insight para el negocio:
+- Planificación financiera: Ofrece a los propietarios un análisis claro sobre el tiempo de retorno de la inversión, crucial para evaluar riesgos y planificar expansiones.
+- Toma de decisiones estratégicas: Identifica qué vehículos pueden generar un ROI más rápido y qué modelos podrían no ser adecuados para taxis.
+- Optimización del flujo de caja: Permite priorizar compras de vehículos que garanticen un flujo de caja positivo más temprano.
+
+4. Optimización de Rutas para Taxis
+
+Funcionalidad:
+Mediante el clustering de ubicaciones (utilizando KMeans), esta sección:
+- Agrupa zonas de alta demanda según las ubicaciones de recogida (PULocationID) o destino (DOLocationID).
+- Visualiza estos clusters en un mapa interactivo con folium.
+
+Insight para el negocio:
+
+- Estrategia basada en demanda: Permite identificar áreas con mayor densidad de pasajeros, ayudando a los conductores a posicionarse estratégicamente.
+- Reducción de tiempos muertos: Minimiza los tiempos en los que los taxis circulan vacíos, aumentando la rentabilidad.
+- Segmentación geográfica: Ayuda a entender patrones de demanda en diferentes horarios o días de la semana, optimizando recursos humanos y vehiculares.
+- Planificación de expansión: Si un área tiene una alta concentración de recogidas o destinos, esto puede indicar la necesidad de aumentar la flota en esa región.
+
+#### Conclusión General
+
+Esta aplicación ofrece herramientas prácticas y basadas en datos para el negocio de taxis eléctricos. Sus funcionalidades están diseñadas para resolver problemas clave como:
+- Optimización de la flota (comparación de modelos).
+- Toma de decisiones informadas (recomendaciones).
+- Gestión financiera estratégica (predicción de amortización).
+- Eficiencia operativa y logística (optimización de rutas).
+
+Impacto Potencial:
+
+- Reducción de costos: Al elegir vehículos eficientes y operarlos estratégicamente.
+- Aumento de ingresos: Al maximizar el tiempo productivo y aprovechar zonas de alta demanda.
+- Decisiones basadas en datos: Minimiza la incertidumbre y aumenta la confiabilidad en cada inversión o estrategia operativa.
+
+### App de demanda y predicción de zonas para taxis amarillos. Render. 
+
+Url App: https://ml-taxisny.onrender.com/ 
+
+1. Objetivo de la App: La aplicación combina análisis de datos con funcionalidades de predicción y visualización, específicamente enfocada en datos de viajes de taxis (taxis verdes y amarillos en Nueva York). Ofrece insights sobre patrones de demanda, ingresos promedio y rutas óptimas, utilizando herramientas como FastAPI para el backend, Dash para la visualización interactiva, y modelos de machine learning para predicciones.
+
+2. Principales Funcionalidades
+- Carga y Preprocesamiento de Datos:
+	+ Los datos de viajes de taxis verdes y amarillos son procesados para incluir características clave como:
+		+ Hora y día del viaje.
+		+ Ubicación de recogida.
+		+ Ingreso y distancia promedio del viaje.
+	+ Se eliminan valores atípicos para garantizar análisis más precisos.
+- Análisis de Demanda Semanal:
+	+ Agrega y presenta información sobre la cantidad de viajes, ingresos promedio, y horas pico en diferentes zonas y días de la semana.
+	+ Permite a los usuarios identificar zonas y horarios con alta demanda.
+- Visualización Interactiva (Dash):
+	+ Gráficos para Taxis Verdes y Amarillos:
+		+ Comparación de la cantidad de viajes y ganancias promedio por zona.
+	+ Heatmap:
+		+ Muestra patrones de demanda por horas y días en zonas específicas.
+		+ Predicciones de Horarios y Rutas Óptimas:
+- Utiliza un modelo de Random Forest para predecir:
+	+ La mejor hora para operar en una zona específica.
+	+ El recorrido promedio.
+	+ La ganancia estimada.
+- Integración en un Ecosistema Web:
+	+ Ofrece una interfaz de usuario moderna y visual mediante Dash, montada sobre FastAPI, accesible a través de un navegador.
+
+3. Utilidad para el Negocio de Taxis
+- Optimización de Operaciones: Identificar zonas y horarios de alta demanda permite a los conductores y empresas asignar recursos eficientemente, maximizando ingresos y reduciendo tiempos muertos.
+- Mejora en la Planificación: Los datos históricos procesados ayudan a tomar decisiones basadas en patrones reales de demanda, especialmente útiles en eventos especiales o temporadas.
+- Predicciones y Recomendaciones: Al predecir horarios óptimos y rutas más rentables, los conductores pueden optimizar sus recorridos, reduciendo costos operativos y aumentando su rentabilidad.
+- Estrategias de Expansión: La información sobre la distribución de la demanda en diferentes zonas y días permite a las empresas planificar estrategias de expansión o promoción en áreas menos explotadas.
+- Interfaz Amigable: La visualización interactiva simplifica la comprensión de datos complejos, haciendo accesible la información a usuarios con poca experiencia técnica.
+
+4. Conclusión
+Esta aplicación ofrece un enfoque integral para la gestión y optimización del negocio de taxis, combinando análisis de datos, machine learning, y visualización interactiva. Proporciona herramientas clave para mejorar la rentabilidad y eficiencia operativa, y su arquitectura modular permite escalarla o personalizarla según las necesidades de diferentes mercados.
+
+## Dashboard PowerBi: Taxis Nueva York
+
+Este dashboard interactivo explora diversos aspectos del transporte en taxi en la ciudad de Nueva York, incluyendo análisis sobre facturación, demanda horaria, duración promedio por zonas, así como emisiones de CO₂ y tendencias geográficas. Está diseñado para facilitar la exploración de datos, métricas y KPI's, ayudando a reflexionar sobre las estrategias a implementar. Los filtros disponibles son los siguientes:
+
+### Filtros disponibles:
++ Temporales:
+	- Año.
+	- Mes.
+	- Semana.
++ Tipo de Taxi:
+	- Amarillo.
+	- Verde.
++ Geográficos:
+	- Distrito.
+	- Zonas.
+Cada pestaña incluye un símbolo de información que, al hacer clic, muestra un resumen sobre el contenido específico que se puede explorar en esa sección.
+
+### Pestañas del Dashboard:
+
+1. Portada Introductoria
+- Una portada introductoria que presenta el dashboard.
+- Incluye los logos de las empresas involucradas en el proyecto.
+- Da inicio a la exploración interactiva de los datos.
+2. Facturación y Demanda Horaria
+- Análisis interactivo de la facturación total y promedio, así como de la demanda por franjas horarias.
+- Incluye:
+	+ Un gráfico de línea que muestra los días de la semana con mayor demanda.
+	+ Un gráfico de barras que presenta los días del mes con más viajes realizados.
+	+ Cuadros resumen con los volúmenes específicos para esos días.
+- Filtros disponibles:
+	+ Tipo de taxi.
+	+ Año.
+	+ Mes.
+	+ Semana.
+Este análisis es ideal para descubrir insights sobre la facturación y la demanda horaria.
+
+3. Demanda por Zonas
+
+- Exploración dinámica de la demanda de taxis en las distintas zonas de Nueva York, junto con un análisis de la duración promedio de los viajes.
+- Elementos destacados:
+	+ Shape Map: Un mapa temático de la ciudad que muestra la distribución de la cantidad de viajes y su duración mediante un rango de colores.
+	+ Gráficos complementarios:
+	+ De anillo.
+	+ Barras horizontales.
+	+ Funnel.
+- Filtros disponibles:
+	+ Tipo de taxi.
+	+ Año.
+	+ Mes.
+	+ Zonas.
+	+ Distrito.
+Esta sección permite analizar las áreas de mayor actividad y las diferencias geográficas en la ciudad, además de explorar la duración de los viajes.
+
+4. Emisiones de CO₂
+- Análisis de las emisiones de CO₂ de los vehículos, diferenciando por tipo de combustible.
+- Métricas destacadas:
+	+ Promedio de CO₂ emitido por vehículo.
+	+ Distancia promedio de los viajes.
+	+ Cantidades de emisiones según rangos temporales y distritos.
+- Gráficos utilizados:
+	+ De anillo.
+	+ Barras horizontales.
+	+ Filtros disponibles:
+- Tipo de taxi.
+	+ Año.
+	+ Mes.
+	+ Distrito.
+	+ Identifica tendencias y patrones relacionados con las emisiones de CO₂, ayudando a reflexionar sobre posibles estrategias de mejora.
+
+5. KPI's y Objetivos
+Presentación de las métricas clave (KPI's) relacionadas con los objetivos de la empresa. Los principales objetivos son:
+
+- Reducción de emisiones de CO₂:
+	- Meta: Reducir un 15% las emisiones para el año 2026.
+	- Estrategias:
+		+ Optimización de rutas.
+		+ Incorporación de vehículos eléctricos.
+		+ Sustitución de autos de combustión interna.
+
+- Reducción de la duración promedio de los viajes:
+	+ Meta: Disminuir la duración en un 7% el próximo año.
+	+ Beneficios:
+		+ Mejora en la experiencia de usuarios y conductores.
+		+ Reducción de costos de combustible y desgaste vehicular.
+		+ Impacto positivo en tarifas y emisiones de CO₂.
+
+- Incremento del 10% en la facturación anual:
+	+ Meta: Mejorar las ganancias y expandir la empresa.
+	+ Estrategias:
+		+ Expansión de la flota y contratación de conductores.
+		+ Enfoque en vehículos eléctricos para mayor eficiencia.
+
+
+## Conclusiones y Recomendaciones
+
+### Conclusiones
+
+#### Rentabilidad y sostenibilidad como motor del negocio
+La transición a una flota de vehículos eléctricos es una estrategia clave para:
+- Reducir costos operativos relacionados con el combustible y mantenimiento.
+- Garantizar un impacto positivo en los márgenes de ganancia.
+- Posicionar a la empresa como una aliada del medio ambiente, respondiendo a las demandas sociales y regulaciones sobre sostenibilidad.
+- Fortalecer la imagen corporativa y asegurar relevancia en un mercado competitivo.
+
+#### Optimización operativa mediante datos
+La integración de modelos de machine learning ha permitido:
+- Identificar patrones de demanda y optimizar rutas de operación.
+- Reducir tiempos muertos y maximizar la eficiencia de la flota.
+- Asegurar un uso estratégico de los recursos, minimizando desperdicios y mejorando la productividad.
+
+#### Diferenciación a través de tecnología y análisis
+El uso de herramientas como dashboards interactivos y sistemas predictivos logra:
+- Facilitar la toma de decisiones estratégicas basadas en datos en tiempo real.
+- Posicionar a la empresa como líder en innovación tecnológica dentro del sector transporte.
+- Crear una ventaja competitiva frente a empresas que operan con modelos tradicionales.
+- Brindar confianza y transparencia a clientes y socios del negocio.
+
+### Recomendaciones
+
+#### Implementación gradual y monitoreo de flota eléctrica
+- Iniciar la transición con un porcentaje inicial de vehículos eléctricos.
+- Priorizar modelos con alta autonomía, bajo consumo energético y costos operativos competitivos.
+- Realizar un monitoreo constante del rendimiento y los beneficios obtenidos para ajustar la estrategia de expansión progresivamente.
+- Asegurar que las inversiones sean rentables y sostenibles a largo plazo.
+
+#### Estrategias de posicionamiento en el mercado
+- Diseñar campañas de marketing que destaquen:
+  - El compromiso de la empresa con la sostenibilidad.
+  - La reducción de la huella de carbono mediante el uso de vehículos eléctricos.
+- Resaltar los beneficios económicos y tecnológicos para los usuarios:
+  - Precios competitivos.
+  - Servicios innovadores.
+- Fomentar la preferencia del cliente y fortalecer la reputación de la marca.
